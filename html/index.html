@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Телефонный справочник</title>
+</head>
+
+<body>
+  <header>
+    <h1>Телефонный справочник</h1> 
+	  <p></p>
+  </header>
+	<article>
+  <table class="phones-table" id="phonesTable" style="display: none"></table>
+  <div class="user-form">
+  <label>Список ID:</label>
+    <select name="data-select" id="dataSelect"></select>
+	  <button class="delete-btn" id="delBtn">Удалить</button>
+    <div class="content-wrapper">
+      <label >ID:</label>
+      <input id="id" name="id" placeholder="ID" class="id-field" type="text">
+      <label >ФИО:</label>
+      <input id="name" name="name" placeholder="ФИО" class="name-field" type="text">
+	    <label>Адрес:</label>
+      <input id="location" name="location" placeholder="Домашний адрес" class="location-field" type="text">
+	    <label>Номер телефона:</label>
+      <input name="class" placeholder="Номер"  id="phone">
+      <label id="new_Field"></label>
+      <label id="forInsert"></label>
+      <div class="credit-radio">
+        <label>
+          с задолженностью
+          <input type="radio" name="credit" value='true' id="creditTrue">
+        </label>
+        <label>
+          без задолженности
+          <input type="radio" name="credit" value='false' checked id="creditFalse">
+        </label>
+		    <button class="reset-btn" id="resetBtn">Очистить</button>
+        <button class="add-btn" id="addBtn">Добавить</button>
+      </div>
+    </div>
+  </div>
+  <div class="special-form">
+  <button class="show-btn" id="showBtn">Список телефонов</button>
+    <button class="credit-btn" id='creditBtn'>Должники</button>
+    <table class="olimp-table" id="olimpTable"></table>
+    <div class="special-field">
+      <label>Поле:</label> 
+      <select class="newfield" id="new_input_select">
+            <option value="marital">Семейное положение</option>
+            <option value="disability">Инвалидность</option>
+            <option value="military">Отношение к воинской службе</option>
+      </select>   
+      <!--<input id="fieldText" placeholder="" type="text">-->
+	    <button class="add-spec-btn" id="addSpecButton">Добавить поле</button>
+      <button class="del-spec-btn" id="delSpecButton">Удалить поле</button>
+    </div>
+  </div>
+
+  <table class="credit-table" id="creditTable" style="display: none"></table>
+  </article>
+  <footer>
+    <p>Copyright Nastya 2018</p>
+  </footer>
+  <script src="../script/script.js" defer></script>
+</body>
+
+</html>
